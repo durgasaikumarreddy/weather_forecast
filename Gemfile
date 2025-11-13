@@ -18,7 +18,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -27,6 +27,18 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+
+# HTTP client
+gem 'faraday', '~> 2.14'
+
+# Geocoding library
+gem 'geocoder', '~> 1.8', '>= 1.8.6'
+
+# Serializer for JSON APIs
+gem "active_model_serializers", "~> 0.10.15"
+
+# Load environment variables from .env file
+gem 'dotenv-rails', '~> 3.1', '>= 3.1.8'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -41,7 +53,7 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  # gem 'spring'
 end
 
 group :test do
@@ -50,6 +62,10 @@ group :test do
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  # Minitest enhancements
+  gem 'minitest', '~> 5.26', '>= 5.26.1'
+  # Mocking and stubbing library
+  gem 'mocha', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
