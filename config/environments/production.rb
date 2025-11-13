@@ -62,7 +62,11 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "weather_forecast_production"
 
-  config.action_mailer.perform_caching = false
+  config.action_mailer.perform_caching = true
+  config.cache_store = :redis_cache_store, {
+    url: ENV.fetch('REDIS_URL', 'redis://localhost:6379/1'),
+    namespace: 'weather_forecast_cache'
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
