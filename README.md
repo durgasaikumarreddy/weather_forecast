@@ -32,8 +32,11 @@ A simple, modular **Rails API** that fetches and returns weather forecasts using
 Before running the project, ensure you have the following installed:
 
 **Ruby** 3.2.3
+
 **Rails** 6.1.7.10
+
 **Redis** latest
+
 **Git** latest
 
 ---
@@ -82,8 +85,11 @@ Parameters:
 | `forecast_hours` | Integer (optional) | Number of hours for hourly forecast |
 
 Example Requests:
+
   GET `/v1/forecast?address=Chicago`
+
   Response:
+  
   ```bash
   {
     "message": "Forecast fetched successfully",
@@ -107,7 +113,9 @@ Example Requests:
   ```
 
   GET `/v1/forecast?address=Chicago&forecast_type=daily`
+  
   Response:
+  
   ```bash
   {
     "message": "Forecast fetched successfully",
@@ -157,7 +165,9 @@ Example Requests:
   ```
 
   GET `/v1/forecast?address=Chicago&forecast_type=daily&forecast_days=3`
+  
   Response:
+  
   ```bash
   {
     "message": "Forecast fetched successfully",
@@ -207,7 +217,9 @@ Example Requests:
   ```
 
   GET `/v1/forecast?address=Chicago&forecast_type=hourly`
+  
   Response:
+  
   ```bash
   {
     "message": "Forecast fetched successfully",
@@ -245,7 +257,9 @@ Example Requests:
   ```
 
   GET `/v1/forecast?address=Chicago&forecast_type=hourly&forecast_hours=4`
+  
   Response:
+  
   ```bash
   {
     "message": "Forecast fetched successfully",
@@ -287,6 +301,7 @@ Example Requests:
   ```
 
   Error responses:
+  
   ```bash
   {
     "message": "Invalid parameters",
