@@ -40,6 +40,9 @@ gem "active_model_serializers", "~> 0.10.15"
 # Load environment variables from .env file
 gem 'dotenv-rails', '~> 3.1', '>= 3.1.8'
 
+# Logging library
+gem 'logger', '~> 1.4'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

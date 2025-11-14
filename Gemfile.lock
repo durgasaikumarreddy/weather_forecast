@@ -264,6 +264,7 @@ DEPENDENCIES
   geocoder (~> 1.8, >= 1.8.6)
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  logger (~> 1.4)
   minitest (~> 5.26, >= 5.26.1)
   mocha
   puma (~> 5.0)
